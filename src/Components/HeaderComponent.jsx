@@ -11,7 +11,7 @@ export default function HeaderComponent() {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <div className="max-w-7xl mx-auto mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between">
+    <div className="max-w-7xl mx-auto mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between z-50">
       <Link to="/">
         <img
           src="/mauve_logo.png"
@@ -138,7 +138,7 @@ export default function HeaderComponent() {
           </Link>
           <Link
             to="/log-in"
-            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            className="p-2 w-full bg-[rgb(214,96,247)] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
             onClick={() => setMenuVisible(false)}
           >
             Log in
