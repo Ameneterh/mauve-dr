@@ -8,4 +8,5 @@ body {
   background-image: url("/bg_image.png");
   background-position: top;
   background-repeat: no-repeat;
+  font-family: "Public Sans";
 }

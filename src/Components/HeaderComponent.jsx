@@ -4,18 +4,21 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import Divider from "./Divider";
 
 export default function HeaderComponent() {
   const path = useLocation().pathname;
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <div className="w-full mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between">
-      <img
-        src="/mauve_logo.png"
-        alt="mauve logo"
-        className=" h-10 lg:h-[60px]"
-      />
+    <div className="max-w-7xl mx-auto mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between">
+      <Link to="/">
+        <img
+          src="/mauve_logo.png"
+          alt="mauve logo"
+          className=" h-10 lg:h-[60px]"
+        />
+      </Link>
       <div className="px-8 bg-[#D484EA] hidden lg:flex items-center justify-center gap-4 h-10 rounded-md text-sm">
         <Link
           to="/"
@@ -93,7 +96,7 @@ export default function HeaderComponent() {
 
       {/* dropdown menu */}
       <div
-        className={`flex flex-col h-56 bg-slate-950 opacity-75 absolute top-0 right-0 overflow-hidden transition-all ${
+        className={`flex flex-col bg-[#D484EA] opacity-95 absolute top-0 right-0 overflow-hidden transition-all ${
           menuVisible === true ? "w-full sm:w-96" : "w-0"
         }`}
       >
@@ -103,6 +106,50 @@ export default function HeaderComponent() {
         >
           <RiArrowGoBackLine />
           Back
+        </div>
+        <div className="flex-1 p-2 flex flex-col gap-2 justify-between text-white text-center">
+          <Link
+            to="/"
+            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            onClick={() => setMenuVisible(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/service"
+            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            onClick={() => setMenuVisible(false)}
+          >
+            Service
+          </Link>
+          <Link
+            to="/about"
+            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            onClick={() => setMenuVisible(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/price"
+            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            onClick={() => setMenuVisible(false)}
+          >
+            Price
+          </Link>
+          <Link
+            to="/log-in"
+            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            onClick={() => setMenuVisible(false)}
+          >
+            Log in
+          </Link>
+          <Link
+            to="/sign-up"
+            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            onClick={() => setMenuVisible(false)}
+          >
+            Sign up
+          </Link>
         </div>
       </div>
     </div>
