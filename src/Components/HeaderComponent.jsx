@@ -10,8 +10,12 @@ export default function HeaderComponent() {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <div className="w-full mt-6 px-3 lg:px-14 flex gap-12 items-center justify-between">
-      <img src="/mauve_logo.png" alt="mauve logo" className="h-20" />
+    <div className="w-full mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between">
+      <img
+        src="/mauve_logo.png"
+        alt="mauve logo"
+        className=" h-10 lg:h-[60px]"
+      />
       <div className="px-8 bg-[#D484EA] hidden lg:flex items-center justify-center gap-4 h-10 rounded-md text-sm">
         <Link
           to="/"
@@ -72,7 +76,14 @@ export default function HeaderComponent() {
           Sign-up
         </Link>
       </div>
-      <input type="text" className="rounded-full w-56 border-[#D484EA]" />
+
+      {/* search */}
+      <input
+        type="text"
+        className="hidden lg:inline-block rounded-full w-10 lg:w-56 border-[#D484EA]"
+      />
+
+      {/* dropdown */}
       <div
         className="inline-block lg:hidden cursor-pointer"
         onClick={() => setMenuVisible(true)}
