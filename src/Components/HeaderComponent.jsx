@@ -11,12 +11,12 @@ export default function HeaderComponent() {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <div className="w-full mt-4 lg:mt-6 px-3 lg:px-20 lg:py-3 flex gap-4 lg:gap-12 items-center justify-between z-50 sticky top-0 bg-white opacity-95">
+    <div className="w-full mt-4 lg:mt-6 py-1 px-3 lg:px-20 lg:py-3 flex gap-4 lg:gap-12 items-center justify-between z-50 sticky top-0 bg-white opacity-95">
       <Link to="/">
         <img
           src="/mauve_logo.png"
           alt="mauve logo"
-          className=" h-10 lg:h-[60px]"
+          className=" h-[50px] lg:h-[60px]"
         />
       </Link>
       <div className="px-8 bg-[#D484EA] hidden md:flex items-center justify-center gap-4 h-10 rounded-md text-sm">
@@ -96,7 +96,7 @@ export default function HeaderComponent() {
 
       {/* dropdown menu */}
       <div
-        className={`flex flex-col bg-[#D484EA] opacity-95 absolute top-0 right-0 overflow-hidden transition-all ${
+        className={`flex flex-col bg-[#d660f7] absolute top-0 right-0 overflow-hidden transition-all ${
           menuVisible === true ? "w-full sm:w-96" : "w-0"
         }`}
       >
@@ -110,42 +110,42 @@ export default function HeaderComponent() {
         <div className="flex-1 p-2 flex flex-col gap-2 justify-between text-white text-center">
           <Link
             to="/"
-            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
             onClick={() => setMenuVisible(false)}
           >
             Home
           </Link>
           <Link
             to="/service"
-            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
             onClick={() => setMenuVisible(false)}
           >
             Service
           </Link>
           <Link
             to="/about"
-            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
             onClick={() => setMenuVisible(false)}
           >
             About
           </Link>
           <Link
             to="/price"
-            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
             onClick={() => setMenuVisible(false)}
           >
             Price
           </Link>
           <Link
             to="/log-in"
-            className="p-2 w-full bg-[rgb(214,96,247)] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
             onClick={() => setMenuVisible(false)}
           >
             Log in
           </Link>
           <Link
             to="/sign-up"
-            className="p-2 w-full bg-[#d660f7] rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
+            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
             onClick={() => setMenuVisible(false)}
           >
             Sign up

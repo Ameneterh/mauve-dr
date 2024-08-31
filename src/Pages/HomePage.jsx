@@ -2,6 +2,9 @@ import React from "react";
 import HeroComponent from "../Components/HeroComponent";
 import { Link } from "react-router-dom";
 import ServicesComponent from "../Components/ServicesComponent";
+import { Carousel } from "flowbite-react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import TestimonialComponent from "../Components/TestimonialComponent";
 
 export default function HomePage() {
   return (
@@ -90,7 +93,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* third section */}
+      {/* fourth section - services */}
       <div className="max-w-7xl mx-auto px-2 flex flex-col items-center w-full py-2 lg:py-8">
         <div className="text-[#D484EA] text-4xl md:text-6xl font-extrabold">
           Services
@@ -111,6 +114,40 @@ export default function HomePage() {
             description="Do you need drivers for specific period of  time, Mauve Driver Recruit can help you get drivers"
             image="/services-3.png"
           />
+        </div>
+      </div>
+
+      {/* fifth section - testimonials */}
+      <div className="max-w-5xl mx-auto px-2 flex flex-col items-centerw-full py-2 lg:py-8">
+        <div className="text-[#D484EA] text-4xl md:text-6xl font-extrabold capitalize">
+          Our happy clients say about us
+        </div>
+        <div className="h-96 w-full bg-[#44244D] mt-10">
+          <Carousel
+            pauseOnHover
+            slideInterval={5000}
+            leftControl={<FaChevronLeft className="text-white text-5xl" />}
+            rightControl={<FaChevronRight className="text-white text-5xl" />}
+          >
+            <TestimonialComponent
+              image="/testimonial.png"
+              name="Lucy Mandy"
+              comment="Since we have  been using mauve for our ordering  our ride it has been the best we made"
+              location="Lekki, Phase 1"
+            />
+            <TestimonialComponent
+              image="/testimonial.png"
+              name="Nancy Mandy"
+              comment="Since we have  been using mauve for our ordering  our ride it has been the best we made"
+              location="Lekki, Phase 2"
+            />
+            <TestimonialComponent
+              image="/testimonial.png"
+              name="Maduka Jenice"
+              comment="Since we have  been using mauve for our ordering  our ride it has been the best we made"
+              location="Area 7, Abuja"
+            />
+          </Carousel>
         </div>
       </div>
     </div>
