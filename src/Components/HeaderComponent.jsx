@@ -19,7 +19,7 @@ export default function HeaderComponent() {
           className=" h-[50px] lg:h-[60px]"
         />
       </Link>
-      <div className="px-8 bg-[#D484EA] hidden md:flex items-center justify-center gap-4 h-10 rounded-md text-sm">
+      <div className="px-8 bg-[#D484EA] hidden md:flex items-center justify-center gap-4 h-12 rounded-md text-sm">
         <Link
           to="/"
           className={`h-full flex items-center px-2 ${
