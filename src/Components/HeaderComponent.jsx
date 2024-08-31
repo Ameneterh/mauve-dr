@@ -11,7 +11,7 @@ export default function HeaderComponent() {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <div className="max-w-7xl mx-auto mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between z-50">
+    <div className="max-w-7xl mx-auto mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between z-50 sticky top-0">
       <Link to="/">
         <img
           src="/mauve_logo.png"
@@ -19,7 +19,7 @@ export default function HeaderComponent() {
           className=" h-10 lg:h-[60px]"
         />
       </Link>
-      <div className="px-8 bg-[#D484EA] hidden lg:flex items-center justify-center gap-4 h-10 rounded-md text-sm">
+      <div className="px-8 bg-[#D484EA] hidden md:flex items-center justify-center gap-4 h-10 rounded-md text-sm">
         <Link
           to="/"
           className={`h-full flex items-center px-2 ${
@@ -83,12 +83,12 @@ export default function HeaderComponent() {
       {/* search */}
       <input
         type="text"
-        className="hidden lg:inline-block rounded-full w-10 lg:w-56 border-[#D484EA]"
+        className="hidden md:inline-block rounded-full w-10 md:w-56 border-[#D484EA]"
       />
 
       {/* dropdown */}
       <div
-        className="inline-block lg:hidden cursor-pointer"
+        className="inline-block md:hidden cursor-pointer"
         onClick={() => setMenuVisible(true)}
       >
         <BiMenuAltRight className="text-3xl text-[#D484EA]" />
