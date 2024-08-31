@@ -11,7 +11,7 @@ export default function HeaderComponent() {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <div className="max-w-7xl mx-auto mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between z-50 sticky top-0">
+    <div className="max-w-7xl mx-auto mt-4 lg:mt-6 px-3 lg:px-14 flex gap-4 lg:gap-12 items-center justify-between z-50 sticky top-0 bg-white opacity-95">
       <Link to="/">
         <img
           src="/mauve_logo.png"
