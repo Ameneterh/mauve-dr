@@ -4,15 +4,18 @@ import { Link } from "react-router-dom";
 import ServicesComponent from "../Components/ServicesComponent";
 import { Carousel } from "flowbite-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { testimonials } from "../testimonials";
 import TestimonialComponent from "../Components/TestimonialComponent";
 
 export default function HomePage() {
+  console.log(testimonials);
+
   return (
-    <div className="min-h-screen">
+    <div className="">
       <HeroComponent />
 
       {/* second section */}
-      <div className="flex flex-col md:flex-row items-center bg-[#A95AC0] w-full my-10 pl-2 lg:pl-24 py-2 lg:py-8">
+      <div className="flex flex-col md:flex-row items-center bg-[#A95AC0] w-full pl-2 lg:pl-24 py-2 lg:py-8">
         <div className="flex flex-col gap-6 w-full lg:w-1/2">
           <h1 className="text-3xl lg:text-6xl text-white font-extrabold">
             Become a Mauve Driver
@@ -129,7 +132,16 @@ export default function HomePage() {
             leftControl={<FaChevronLeft className="text-white text-5xl" />}
             rightControl={<FaChevronRight className="text-white text-5xl" />}
           >
-            <TestimonialComponent
+            {testimonials.map((testimonial, key) => (
+              <TestimonialComponent
+                key={testimonial.id}
+                image={testimonial.image}
+                name={testimonial.name}
+                message={testimonial.message}
+                location={testimonial.location}
+              />
+            ))}
+            {/* <TestimonialComponent
               image="/testimonial.png"
               name="Lucy Mandy"
               comment="Since we have  been using mauve for our ordering  our ride it has been the best we made"
@@ -146,7 +158,7 @@ export default function HomePage() {
               name="Maduka Jenice"
               comment="Since we have  been using mauve for our ordering  our ride it has been the best we made"
               location="Area 7, Abuja"
-            />
+            /> */}
           </Carousel>
         </div>
       </div>
