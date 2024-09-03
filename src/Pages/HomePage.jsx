@@ -1,11 +1,11 @@
 import React from "react";
-import HeroComponent from "../Components/HeroComponent";
 import { Link } from "react-router-dom";
-import ServicesComponent from "../Components/ServicesComponent";
+import ServicesComponent from "../Components/HomeComponents/ServicesComponent";
 import { Carousel } from "flowbite-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { testimonials } from "../testimonials";
-import TestimonialComponent from "../Components/TestimonialComponent";
+import TestimonialComponent from "../Components/HomeComponents/TestimonialComponent";
+import HeroComponent from "../Components/HomeComponents/HeroComponent";
 
 export default function HomePage() {
   console.log(testimonials);

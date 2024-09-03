@@ -9,6 +9,7 @@ import PricePage from "./Pages/PricePage";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import FooterComponent from "./Components/FooterComponent";
+import TermsAndConditions from "./Pages/TermsAndConditions";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/price" element={<PricePage />} />
         <Route path="/log-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/tnc" element={<TermsAndConditions />} />
       </Routes>
       <FooterComponent />
     </BrowserRouter>

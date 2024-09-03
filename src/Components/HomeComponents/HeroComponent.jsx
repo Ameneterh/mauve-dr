@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import heroimage from "../assets/heroHome.svg";
+import heroimage from "./heroHome.svg";
 import bgimage from "/bg_image.png";
 
 export default function HeroComponent() {
