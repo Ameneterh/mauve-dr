@@ -1,5 +1,10 @@
 import React from "react";
+import MainLayout from "../layout/MainLayout";
 
 export default function PricePage() {
-  return <div className="min-h-screen">Price Page</div>;
+  return (
+    <MainLayout>
+      <div className="min-h-screen">Price Page</div>
+    </MainLayout>
+  );
 }
