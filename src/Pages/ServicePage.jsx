@@ -1,8 +1,10 @@
 import React from "react";
 import { TbCurrencyNaira } from "react-icons/tb";
+import { BiSolidQuoteLeft } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Divider from "../Components/Divider";
 import RatingComponent from "../Components/RatingComponent";
+import { Accordion } from "flowbite-react";
 
 export default function ServicePage() {
   return (
@@ -42,9 +44,9 @@ export default function ServicePage() {
 
       {/* Star Rating */}
       <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-md lg:text-lg max-w-6xl mx-auto">
-        <div className="w-full flex flex-col gap-3 flex-1">
+        <div className="w-full flex flex-col gap-3 justify-center flex-1">
           <Divider />
-          <div className="w-full flex items-center justify-between">
+          <div className="w-full flex flex-col lg:flex-row gap-y-6 items-center justify-between">
             <RatingComponent companyName="Elverde Logistics" />
             <RatingComponent companyName="AdmiraloverseasNigeria" />
             <RatingComponent companyName="Transcorp Int" />
@@ -56,7 +58,7 @@ export default function ServicePage() {
       {/* Section Two */}
       <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-md lg:text-lg bg-[#bf73d6] p-4 lg:py-16 lg:px-24">
         <div className="text-sm flex flex-col flex-1 gap-4 text-white">
-          <h1 className="text-5xl font-semibold">
+          <h1 className="text-2xl font-extrabold lg:text-5xl lg:font-semibold">
             Hire A Professional Driver in 3 Simple Steps
           </h1>
           <h3 className="text-xl font-semibold">Tell Us Your Needs</h3>
@@ -98,9 +100,9 @@ export default function ServicePage() {
       </section>
 
       {/* Section Three */}
-      <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row justify-between gap-6 text-md lg:text-lg p-4 lg:py-8 lg:px-24 h-96">
+      <section className="w-full mt-4 lg:mt-10 flex flex-col gap-4 lg:gap-14 text-md lg:text-lg p-4 lg:py-8 lg:px-24">
         <div className="p-10 w-full flex flex-col items-center justify-center text-center gap-4 bg-[#f6d7ff]">
-          <h1 className="text-[#A95AC0] text-4xl font-extrabold">
+          <h1 className="text-[#A95AC0] text-2xl lg:text-4xl font-extrabold">
             Choose The Best option for you
           </h1>
           <p className="max-w-[700px] mx-auto text-md">
@@ -115,10 +117,135 @@ export default function ServicePage() {
             Get Started
           </Link>
         </div>
+
+        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-24">
+          <img src="/mauve_lady.png" className="w-[400px]" />
+
+          <div className="flex-1 flex flex-col gap-4 lg:gap-8">
+            <div className="bg-[#A95AC0] text-8xl text-white p-1 w-12 h-16 flex items-center justify-center rounded-md">
+              <BiSolidQuoteLeft />
+            </div>
+            <p className="text-md text-[#A95AC0] font-semibold">
+              I recently had the pleasure of using Mauve Driver Recruit to hire
+              a driver for our company's transportation needs, and I couldn't be
+              more impressed with the experience. From start to finish, the
+              process was smooth, professional, and exceeded all my
+              expectations.
+            </p>
+            <p className="font-bold">
+              Omowumi Janet,{" "}
+              <span className="block font-normal">
+                HR Admiraloverseas Nigeria
+              </span>
+            </p>
+          </div>
+        </div>
+        <Divider />
       </section>
 
       {/* Section Four */}
-      <section></section>
+      <section className="w-full mt-4 lg:mt-10 flex flex-col gap-4 lg:gap-14 text-md lg:text-lg p-4 lg:py-8 lg:px-24">
+        <div className="w-full max-w-5xl mx-auto flex flex-col gap-6">
+          <h1 className="text-[#874899] text-3xl font-bold text-center max-w-3xl mx-auto">
+            Here are some common FAQs for driver recruitment agencies like Mauve
+            Driver Recruit
+          </h1>
+          <Divider />
+          <Accordion collapseAll className="border-none">
+            <Accordion.Panel>
+              <Accordion.Title className="font-bold">
+                Do you require guarantors for your drivers?
+              </Accordion.Title>
+
+              <Accordion.Content>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, odit excepturi cumque quas autem reprehenderit
+                laudantium numquam ullam, enim repudiandae omnis, dignissimos
+                eligendi eos expedita voluptate. Reiciendis eaque dignissimos
+                illum.
+              </Accordion.Content>
+            </Accordion.Panel>
+            <Accordion.Panel>
+              <Accordion.Title className="font-bold">
+                What is your vetting process for drivers?
+              </Accordion.Title>
+
+              <Accordion.Content>
+                We have a comprehensive multi-step vetting process that includes
+                background checks, employment verification, driving record
+                checks, and reference checks with the provided guarantors. Only
+                candidates who clear all these steps successfully are recruited.
+              </Accordion.Content>
+            </Accordion.Panel>
+            <Accordion.Panel>
+              <Accordion.Title className="font-bold">
+                What vehicle types do you provide drivers for?
+              </Accordion.Title>
+
+              <Accordion.Content>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, odit excepturi cumque quas autem reprehenderit
+                laudantium numquam ullam, enim repudiandae omnis, dignissimos
+                eligendi eos expedita voluptate. Reiciendis eaque dignissimos
+                illum.
+              </Accordion.Content>
+            </Accordion.Panel>
+            <Accordion.Panel>
+              <Accordion.Title className="font-bold">
+                Do you offer temporary/contract or permanent driver placements?
+              </Accordion.Title>
+
+              <Accordion.Content>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, odit excepturi cumque quas autem reprehenderit
+                laudantium numquam ullam, enim repudiandae omnis, dignissimos
+                eligendi eos expedita voluptate. Reiciendis eaque dignissimos
+                illum.
+              </Accordion.Content>
+            </Accordion.Panel>
+            <Accordion.Panel>
+              <Accordion.Title className="font-bold">
+                How do you ensure driver quality and performance?
+              </Accordion.Title>
+
+              <Accordion.Content>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, odit excepturi cumque quas autem reprehenderit
+                laudantium numquam ullam, enim repudiandae omnis, dignissimos
+                eligendi eos expedita voluptate. Reiciendis eaque dignissimos
+                illum.
+              </Accordion.Content>
+            </Accordion.Panel>
+            <Accordion.Panel>
+              <Accordion.Title className="font-bold">
+                What areas or locations do you service?
+              </Accordion.Title>
+
+              <Accordion.Content>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, odit excepturi cumque quas autem reprehenderit
+                laudantium numquam ullam, enim repudiandae omnis, dignissimos
+                eligendi eos expedita voluptate. Reiciendis eaque dignissimos
+                illum.
+              </Accordion.Content>
+            </Accordion.Panel>
+            <Accordion.Panel>
+              <Accordion.Title className="font-bold">
+                Can I interview and test drivers before hiring?
+              </Accordion.Title>
+
+              <Accordion.Content>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, odit excepturi cumque quas autem reprehenderit
+                laudantium numquam ullam, enim repudiandae omnis, dignissimos
+                eligendi eos expedita voluptate. Reiciendis eaque dignissimos
+                illum.
+              </Accordion.Content>
+            </Accordion.Panel>
+          </Accordion>
+          <Divider />
+        </div>
+      </section>
 
       {/* Section Five */}
       <section></section>
