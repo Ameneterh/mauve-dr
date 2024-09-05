@@ -62,7 +62,7 @@ export default function PricePage() {
           <PricesComponent
             height="min-h-[700px]"
             title="Driver Management"
-            amount_action="Book Now"
+            amount_action="Get Quote"
             comment="Our service specialises in seamlessly assigning verified drivers and providing comprehensive management services."
             items={benefit_list_3}
             btn_text="Request Now"
