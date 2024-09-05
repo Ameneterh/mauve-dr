@@ -10,7 +10,7 @@ export default function SignIn() {
 
   return (
     <MainLayout>
-      <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-40 min-h-screen max-w-6xl mx-auto mt-4 lg:mt-10 px-2 lg:px-0 text-[#9E5998]">
+      <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-40 min-h-screen max-w-6xl mx-auto mt-4 lg:mt-10 px-2 lg:px-0 text-[#9E5998] mb-24">
         <div>
           <img src={signinpix} className="w-[501px]" />
         </div>
@@ -62,7 +62,12 @@ export default function SignIn() {
           <Link to="#" className="font-bold">
             Forgot Password?
           </Link>
-          <Button>Login</Button>
+          <Button
+            as="div"
+            className="bg-[#9E5998] hover:opacity-85 cursor-pointer"
+          >
+            Login
+          </Button>
           <p className="flex items-center justify-between">
             Don't have an account?{" "}
             <Link to="/sign-up" className="p-2 px-4 rounded-md bg-[#F8F8F8]">
