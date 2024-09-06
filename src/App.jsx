@@ -8,6 +8,7 @@ import SignUp from "./Pages/SignUp";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import ForgotPassword from "./Pages/ForgotPassword";
 import Verification from "./Pages/Verification";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/verification" element={<Verification />} />
         <Route path="/tnc" element={<TermsAndConditions />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
