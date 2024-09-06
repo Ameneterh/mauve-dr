@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Button } from "flowbite-react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import ServicePage from "./Pages/ServicePage";
@@ -9,6 +7,7 @@ import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import ForgotPassword from "./Pages/ForgotPassword";
+import Verification from "./Pages/Verification";
 
 function App() {
   return (
@@ -20,6 +19,7 @@ function App() {
         <Route path="/price" element={<PricePage />} />
         <Route path="/log-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/verification" element={<Verification />} />
         <Route path="/tnc" element={<TermsAndConditions />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
