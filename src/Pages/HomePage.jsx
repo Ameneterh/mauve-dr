@@ -128,12 +128,16 @@ export default function HomePage() {
           <div className="text-[#D484EA] text-4xl md:text-6xl font-extrabold capitalize">
             Our happy clients say about us
           </div>
-          <div className="min-h-96 w-full bg-[#44244D] mt-10 p-4">
+          <div className="min-h-[400px] w-full bg-[#44244D] mt-10 p-4">
             <Carousel
               pauseOnHover
               slideInterval={5000}
-              leftControl={<FaChevronLeft className="text-white text-5xl" />}
-              rightControl={<FaChevronRight className="text-white text-5xl" />}
+              leftControl={
+                <FaChevronLeft className="hidden sm:inline-block text-white text-5xl" />
+              }
+              rightControl={
+                <FaChevronRight className="hidden sm:inline-block text-white text-5xl" />
+              }
             >
               {testimonials.map((testimonial, key) => (
                 <TestimonialComponent
