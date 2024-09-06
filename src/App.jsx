@@ -8,6 +8,7 @@ import PricePage from "./Pages/PricePage";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import TermsAndConditions from "./Pages/TermsAndConditions";
+import ForgotPassword from "./Pages/ForgotPassword";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/log-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/tnc" element={<TermsAndConditions />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   );

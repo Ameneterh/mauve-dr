@@ -59,7 +59,7 @@ export default function SignIn() {
               </div>
             </div>
           </form>
-          <Link to="#" className="font-bold">
+          <Link to="/forgot-password" className="font-bold">
             Forgot Password?
           </Link>
           <Button
