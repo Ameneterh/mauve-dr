@@ -10,9 +10,9 @@ import MainLayout from "../layout/MainLayout";
 export default function ServicePage() {
   return (
     <MainLayout>
-      <div className="min-h-screen w-full text-[#000000] p-4">
+      <div className="min-h-screen w-full text-[#000000]">
         {/* Section One */}
-        <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-md lg:text-lg max-w-6xl mx-auto">
+        <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-md lg:text-lg max-w-6xl mx-auto p-4 lg:p-0">
           <div className="flex flex-col gap-3 flex-1">
             <p className="font-semibold">
               Unlock Efficiency: Hire Expert Drivers at Unbeatable Prices!
@@ -51,7 +51,6 @@ export default function ServicePage() {
             <div className="w-full flex flex-col lg:flex-row gap-y-6 items-center justify-between">
               <RatingComponent companyName="Elverde Logistics" />
               <RatingComponent companyName="AdmiraloverseasNigeria" />
-              <RatingComponent companyName="Transcorp Int" />
             </div>
             <Divider />
           </div>
