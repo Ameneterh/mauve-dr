@@ -10,7 +10,7 @@ import MainLayout from "../layout/MainLayout";
 export default function ServicePage() {
   return (
     <MainLayout>
-      <div className="min-h-screen w-full text-[#000000]">
+      <div className="min-h-screen w-full text-[#000000] p-4">
         {/* Section One */}
         <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-md lg:text-lg max-w-6xl mx-auto">
           <div className="flex flex-col gap-3 flex-1">

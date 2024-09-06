@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TestimonialComponent(props) {
   return (
-    <div className="max-w-[450px] mx-auto min-h-96 flex flex-col items-center justify-center gap-6 text-white text-center">
+    <div className="w-52 max-w-[450px] mx-auto min-h-96 flex flex-col items-center justify-center gap-6 text-white text-center">
       <div
         className="h-24 w-24 rounded-full border-4 border-white"
         style={{
