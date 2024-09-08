@@ -1,14 +1,49 @@
 import React, { useState } from "react";
 import signuppix from "/signupImage.svg";
 import MainLayout from "../layout/MainLayout";
-import { Button, Label, TextInput } from "flowbite-react";
+import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import { FaEye, FaEyeSlash, FaApple, FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({});
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.fullname || !formData.email || !formData.password) {
+      return setErrorMsg("Please, fill out all fields!");
+    }
+    try {
+      setLoading(true);
+      setErrorMsg(null);
+      const res = await fetch("/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (data.success === false) {
+        return setErrorMsg(data.message);
+      }
+      setLoading(false);
+      if (res.ok) {
+        navigate("/log-in");
+      }
+    } catch (error) {
+      setErrorMsg(error.message);
+      setLoading(false);
+    }
+  };
 
   return (
     <MainLayout>
@@ -23,18 +58,19 @@ export default function SignUp() {
               Enjoy the benefit of Mauve Driver Recruit
             </p>
           </div>
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div className="w-full flex flex-col gap-2">
               <Label
-                htmlFor="firstname"
-                value="First Name"
+                htmlFor="fullname"
+                value="Full Name"
                 className="font-bold text-[#9E5998]"
               />
               <TextInput
-                id="firstname"
+                id="fullname"
                 type="text"
                 placeholder="Ex: Eliza Maguire"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="w-full flex flex-col gap-2">
@@ -48,6 +84,7 @@ export default function SignUp() {
                 type="email"
                 placeholder="Ex: Maguire@FlexUI.com"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="w-full flex flex-col gap-2">
@@ -64,6 +101,7 @@ export default function SignUp() {
                   placeholder="Enter Password"
                   className="w-full"
                   required
+                  onChange={handleChange}
                 />
                 <span
                   className="absolute right-2 text-[#999BA1] text-xl cursor-pointer"
@@ -73,17 +111,30 @@ export default function SignUp() {
                 </span>
               </div>
             </div>
+
+            <Button
+              type="submit"
+              className="bg-[#9E5998] hover:opacity-85 cursor-pointer flex items-center flex-row gap-10 mt-10 py-1"
+              disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <Spinner size="md" />
+                  <span className="pl-3">Creating Account ...</span>
+                </>
+              ) : (
+                <>
+                  <span>Create Account</span>
+                  <HiOutlineArrowRight className="ml-2 h-5 w-5" />
+                </>
+              )}
+            </Button>
           </form>
-          <Link to="#" className="font-bold">
-            Forgot Password?
-          </Link>
-          <Button
-            as="div"
-            className="bg-[#9E5998] hover:opacity-85 cursor-pointer flex items-center flex-row gap-10"
-          >
-            <span>Create Account</span>
-            <HiOutlineArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          {errorMsg && (
+            <Alert className="mt-5" color="failure">
+              {errorMsg}
+            </Alert>
+          )}
           <p className="flex flex-col lg:flex-row items-center gap-1 text-[#999BA1]">
             By creating an account, you agree to our
             <Link to="/tnc" className="text-[#6236F5] font-semibold">
