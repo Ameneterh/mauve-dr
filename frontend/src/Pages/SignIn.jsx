@@ -10,7 +10,7 @@ export default function SignIn() {
 
   return (
     <MainLayout>
-      <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-40 min-h-screen max-w-6xl mx-auto mt-4 lg:mt-10 px-2 lg:px-0 text-[#9E5998] mb-24">
+      <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-40 min-h-screen max-w-6xl mx-auto mt-4 lg:mt-10 px-2 lg:px-0 text-[#A95AC0] mb-24">
         <div>
           <img src={signinpix} className="w-[501px]" />
         </div>
@@ -26,7 +26,7 @@ export default function SignIn() {
               <Label
                 htmlFor="email"
                 value="Email:"
-                className="font-bold text-[#9E5998]"
+                className="font-bold text-[#A95AC0]"
               />
               <TextInput
                 id="email"
@@ -39,7 +39,7 @@ export default function SignIn() {
               <Label
                 htmlFor="email"
                 value="Password:"
-                className="font-bold text-[#9E5998]"
+                className="font-bold text-[#A95AC0]"
               />
               <div className="flex items-center w-full relative">
                 <TextInput
@@ -64,7 +64,7 @@ export default function SignIn() {
           </Link>
           <Button
             as="div"
-            className="bg-[#9E5998] hover:opacity-85 cursor-pointer"
+            className="bg-[#A95AC0] hover:opacity-85 cursor-pointer"
           >
             Login
           </Button>

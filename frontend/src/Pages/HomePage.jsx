@@ -38,7 +38,7 @@ export default function HomePage() {
 
         {/* third section */}
         <div className="flex flex-col w-full my-10 pl-2 lg:pl-24 py-2 lg:py-8">
-          <div className="text-[#D484EA] text-4xl md:text-6xl font-extrabold">
+          <div className="text-[#A95AC0] text-4xl md:text-6xl font-extrabold">
             Why choose us ?
           </div>
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between w-full py-2 lg:py-8">
@@ -101,23 +101,23 @@ export default function HomePage() {
 
         {/* fourth section - services */}
         <div className="max-w-7xl mx-auto px-2 flex flex-col items-center w-full py-2 lg:py-8">
-          <div className="text-[#D484EA] text-4xl md:text-6xl font-extrabold">
+          <div className="text-[#A95AC0] text-4xl md:text-6xl font-extrabold">
             Services
           </div>
           <div className="flex gap-4 flex-wrap justify-between w-full py-2 lg:py-8">
             <ServicesComponent
-              title="One -off driver hire Service"
-              description="Our one-off driver hire service employs customised recruitment strategies to attract drivers that meet your specific requirements."
+              title="One-off driver hire Service"
+              description="We match our clients with professional drivers tailored to their specific requirements. This is a one-time service, and once the driver is hired, they transition to become a direct employee of the client."
               image="/services-1.png"
             />
             <ServicesComponent
-              title="Outsource Driver Recruitment and Management"
-              description="Our one-off driver hire service employs customised recruitment strategies to attract drivers that meet your specific requirements."
+              title="Driver Management/ Outsourcing"
+              description="When you entrust us with end-to-end driver recruitment and management. We handle all aspects of management, including salaries, pension, group life insurance, uniforms, annual leave, promotions. Our seamless process ensures the delivery of skilled drivers to meet your needs."
               image="/services-2.png"
             />
             <ServicesComponent
-              title="On -Demand Driver Service"
-              description="Do you need drivers for specific period of  time, Mauve Driver Recruit can help you get drivers"
+              title="On-Demand Driver Service"
+              description="Do you need drivers for a specific period, such as a day, a week, or two weeks? Mauve Driver Recruit can provide drivers tailored to meet your needs."
               image="/services-3.png"
             />
           </div>
@@ -125,10 +125,10 @@ export default function HomePage() {
 
         {/* fifth section - testimonials */}
         <div className="max-w-5xl mx-auto px-2 flex flex-col items-centerw-full py-2 lg:py-8">
-          <div className="text-[#D484EA] text-4xl md:text-6xl font-extrabold capitalize">
-            Our happy clients say about us
+          <div className="text-[#A95AC0] text-4xl md:text-6xl font-extrabold capitalize text-center">
+            What our clients are saying
           </div>
-          <div className="min-h-[400px] w-full bg-[#44244D] mt-10 p-4">
+          <div className="min-h-[400px] w-full bg-[#5b1a6e] mt-10 p-4">
             <Carousel
               pauseOnHover
               slideInterval={5000}

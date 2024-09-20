@@ -17,7 +17,7 @@ export default function Verification() {
             <Link to="/sign-up" className="">
               <MdClose className="absolute top-3 right-3 hover:bg-slate-100 hover:shadow-md p-1 w-6 h-6 rounded-full" />
             </Link>
-            <h2 className="text-2xl font-bold text-[#874899]">
+            <h2 className="text-2xl font-bold text-[#A95AC0]">
               Verification Code
             </h2>
             <p className="text-sm text-center">
@@ -35,13 +35,13 @@ export default function Verification() {
             <p className="text-sm flex items-center gap-1">
               <Link
                 to="#"
-                className="text-[#874899] underline underline-offset-2 font-semibold"
+                className="text-[#A95AC0] underline underline-offset-2 font-semibold"
               >
                 Click Here
               </Link>{" "}
               if you didn't get the code
             </p>
-            <Button className="w-full mt-4 md:mt-10 bg-[#CA78FA]">
+            <Button className="w-full mt-4 md:mt-10 bg-[#A95AC0]">
               Continue
             </Button>
           </div>

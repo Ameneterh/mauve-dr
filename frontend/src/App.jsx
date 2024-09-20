@@ -9,10 +9,15 @@ import TermsAndConditions from "./Pages/TermsAndConditions";
 import ForgotPassword from "./Pages/ForgotPassword";
 import Verification from "./Pages/Verification";
 import NotFound from "./Pages/NotFound";
+// import PrivateRoutes from "./Components/PrivateRoutes";
+import Dashboard from "./Pages/Dashboard";
+import PaymentPage from "./Pages/PaymentPage";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/service" element={<ServicePage />} />
@@ -23,6 +28,10 @@ function App() {
         <Route path="/verification" element={<Verification />} />
         <Route path="/tnc" element={<TermsAndConditions />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/payment" element={<PaymentPage />} />
+        {/* <Route element={<PrivateRoutes />}> */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* </Route> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

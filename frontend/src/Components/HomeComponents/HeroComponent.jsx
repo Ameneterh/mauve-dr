@@ -10,7 +10,7 @@ export default function HeroComponent() {
       style={{ backgroundImage: `url(${bgimage})` }}
     >
       <div className="w-full flex-1 flex flex-col gap-6">
-        <h1 className="font-extrabold text-2xl md:text-5xl text-[#D484EA]">
+        <h1 className="font-extrabold text-2xl md:text-5xl text-[#A95AC0]">
           Skip the driver search
         </h1>
         <p className="font-semibold text-sm md:text-xl lg:w-96 text-justify">

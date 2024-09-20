@@ -22,14 +22,14 @@ export default function ServicePage() {
               <br /> at Your Fingertips
             </h1>
             <p>
-              24/7 Support for Your Peace of Mind
+              {/* 24/7 Support for Your Peace of Mind */}
               <span className="block">
                 No Hassle, No Technical Skills Required
               </span>
             </p>
-            <p className="flex items-center text-[#AC39D4] font-bold">
+            <p className="flex items-center text-[#A95AC0] font-bold">
               <TbCurrencyNaira className="text-xl" />
-              28000
+              100,000.00
               <span className="text-[#000000] font-normal">/one off hire</span>
             </p>
             <p>+ 90 days guarantee replacement at no cost!</p>
@@ -57,7 +57,7 @@ export default function ServicePage() {
         </section>
 
         {/* Section Two */}
-        <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-md lg:text-lg bg-[#bf73d6] p-4 lg:py-16 lg:px-24">
+        <section className="w-full mt-4 lg:mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-md lg:text-lg bg-[#A95AC0] p-4 lg:py-16 lg:px-24">
           <div className="text-sm flex flex-col flex-1 gap-4 text-white">
             <h1 className="text-2xl font-extrabold lg:text-5xl lg:font-semibold">
               Hire A Professional Driver in 3 Simple Steps
@@ -134,7 +134,7 @@ export default function ServicePage() {
                 my expectations.
               </p>
               <p className="font-bold">
-                Omowumi Janet,{" "}
+                Thelma Opuma,{" "}
                 <span className="block font-normal">
                   HR Admiraloverseas Nigeria
                 </span>
@@ -147,7 +147,7 @@ export default function ServicePage() {
         {/* Section Four */}
         <section className="w-full mt-4 lg:mt-10 flex flex-col gap-4 lg:gap-14 text-md lg:text-lg p-4 lg:py-8 lg:px-24">
           <div className="w-full max-w-5xl mx-auto flex flex-col gap-6">
-            <h1 className="text-[#874899] text-3xl font-bold text-center max-w-3xl mx-auto">
+            <h1 className="text-[#A95AC0] text-3xl font-bold text-center max-w-3xl mx-auto">
               Here are some common FAQs for driver recruitment agencies like
               Mauve Driver Recruit
             </h1>
@@ -159,11 +159,10 @@ export default function ServicePage() {
                 </Accordion.Title>
 
                 <Accordion.Content>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eveniet, odit excepturi cumque quas autem reprehenderit
-                  laudantium numquam ullam, enim repudiandae omnis, dignissimos
-                  eligendi eos expedita voluptate. Reiciendis eaque dignissimos
-                  illum.
+                  Yes, we require all prospective drivers to provide 2 verified
+                  guarantors who can vouch for their character, responsibility,
+                  and trustworthiness. These guarantors should be non-family
+                  members like colleagues, community leaders, etc.
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
@@ -185,11 +184,9 @@ export default function ServicePage() {
                 </Accordion.Title>
 
                 <Accordion.Content>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eveniet, odit excepturi cumque quas autem reprehenderit
-                  laudantium numquam ullam, enim repudiandae omnis, dignissimos
-                  eligendi eos expedita voluptate. Reiciendis eaque dignissimos
-                  illum.
+                  Our driver network includes professionals experienced with
+                  various vehicle types - sedans, SUVs, vans, light trucks,
+                  buses, and specialized vehicles as per client needs.
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
@@ -199,11 +196,9 @@ export default function ServicePage() {
                 </Accordion.Title>
 
                 <Accordion.Content>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eveniet, odit excepturi cumque quas autem reprehenderit
-                  laudantium numquam ullam, enim repudiandae omnis, dignissimos
-                  eligendi eos expedita voluptate. Reiciendis eaque dignissimos
-                  illum.
+                  We offer both temporary/contract and permanent driver hiring
+                  solutions depending on our clients' specific requirements and
+                  preferences.
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
@@ -212,11 +207,10 @@ export default function ServicePage() {
                 </Accordion.Title>
 
                 <Accordion.Content>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eveniet, odit excepturi cumque quas autem reprehenderit
-                  laudantium numquam ullam, enim repudiandae omnis, dignissimos
-                  eligendi eos expedita voluptate. Reiciendis eaque dignissimos
-                  illum.
+                  Apart from the stringent vetting process, we also provide
+                  training, monitor performance metrics, and have a system for
+                  customer feedback and grievance redressal related to our
+                  drivers.
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
@@ -225,11 +219,8 @@ export default function ServicePage() {
                 </Accordion.Title>
 
                 <Accordion.Content>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eveniet, odit excepturi cumque quas autem reprehenderit
-                  laudantium numquam ullam, enim repudiandae omnis, dignissimos
-                  eligendi eos expedita voluptate. Reiciendis eaque dignissimos
-                  illum.
+                  We have a widespread driver network that can service
+                  transportation needs across Lagos State for now
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
@@ -238,11 +229,9 @@ export default function ServicePage() {
                 </Accordion.Title>
 
                 <Accordion.Content>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eveniet, odit excepturi cumque quas autem reprehenderit
-                  laudantium numquam ullam, enim repudiandae omnis, dignissimos
-                  eligendi eos expedita voluptate. Reiciendis eaque dignissimos
-                  illum.
+                  Yes, we facilitate interviews and skills testing for clients
+                  to assess drivers as per their preferences before finalizing
+                  recruitment.
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>

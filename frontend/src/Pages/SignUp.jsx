@@ -47,7 +47,7 @@ export default function SignUp() {
 
   return (
     <MainLayout>
-      <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-40 min-h-screen max-w-6xl mx-auto mt-4 lg:mt-10 px-2 lg:px-0 text-[#9E5998] mb-24">
+      <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-40 min-h-screen max-w-6xl mx-auto mt-4 lg:mt-10 px-2 lg:px-0 text-[#A95AC0] mb-24">
         <div>
           <img src={signuppix} className="w-[501px]" />
         </div>
@@ -63,7 +63,7 @@ export default function SignUp() {
               <Label
                 htmlFor="fullname"
                 value="Full Name"
-                className="font-bold text-[#9E5998]"
+                className="font-bold text-[#A95AC0]"
               />
               <TextInput
                 id="fullname"
@@ -77,7 +77,7 @@ export default function SignUp() {
               <Label
                 htmlFor="email"
                 value="Your Email"
-                className="font-bold text-[#9E5998]"
+                className="font-bold text-[#A95AC0]"
               />
               <TextInput
                 id="email"
@@ -91,7 +91,7 @@ export default function SignUp() {
               <Label
                 htmlFor="email"
                 value="Password:"
-                className="font-bold text-[#9E5998]"
+                className="font-bold text-[#A95AC0]"
               />
               <div className="flex items-center w-full relative">
                 <TextInput
@@ -114,7 +114,7 @@ export default function SignUp() {
 
             <Button
               type="submit"
-              className="bg-[#9E5998] hover:opacity-85 cursor-pointer flex items-center flex-row gap-10 mt-10 py-1"
+              className="bg-[#A95AC0] hover:opacity-85 cursor-pointer flex items-center flex-row gap-10 mt-10 py-1"
               disabled={loading}
             >
               {loading ? (

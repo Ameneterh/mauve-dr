@@ -1,158 +1,151 @@
-import { Button, Navbar, TextInput } from "flowbite-react";
+import { Avatar, Button, Dropdown, Navbar, TextInput } from "flowbite-react";
 import { FaSearch } from "react-icons/fa";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RiArrowGoBackLine } from "react-icons/ri";
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { drivers } from "../dummy_assets/drivers.js";
 import Divider from "./Divider";
 
 export default function HeaderComponent() {
   const path = useLocation().pathname;
   const [menuVisible, setMenuVisible] = useState(false);
+  const [currentUser, setCurrentUser] = useState(true);
 
   return (
-    <div className="w-full py-1 px-3 lg:px-20 lg:py-3 flex gap-4 lg:gap-12 items-center justify-between z-50 sticky top-0 bg-white">
-      <Link to="/">
+    <Navbar fluid rounded className="md:px-14 py-4 sticky top-0 shadow-md z-50">
+      <Navbar.Brand href="/">
         <img
-          src="/mauve_logo.png"
-          alt="mauve logo"
-          className=" h-[50px] md:h-[60px] lg:h-[70px]"
+          src="/favicon.png"
+          className="mr-3 h-12 sm:h-16"
+          alt="mauve Logo"
         />
-      </Link>
-      <div className="px-8 bg-[#D484EA] hidden lg:flex items-center justify-center gap-4 h-12 rounded-md text-lg">
-        <Link
-          to="/"
-          className={`h-full flex items-center px-2 ${
-            path === "/" ? "bg-white text-[#D484EA]" : "bg-[#D484EA] text-white"
-          }`}
-        >
-          Home
-        </Link>
-        <Link
-          to="/service"
-          className={`h-full flex items-center px-2 ${
-            path === "/service"
-              ? "bg-white text-[#D484EA]"
-              : "bg-[#D484EA] text-white"
-          }`}
-        >
-          Service
-        </Link>
-        <Link
-          to="/about"
-          className={`h-full flex items-center px-2 ${
-            path === "/about"
-              ? "bg-white text-[#D484EA]"
-              : "bg-[#D484EA] text-white"
-          }`}
-        >
-          About
-        </Link>
-        <Link
-          to="/price"
-          className={`h-full flex items-center px-2 ${
-            path === "/price"
-              ? "bg-white text-[#D484EA]"
-              : "bg-[#D484EA] text-white"
-          }`}
-        >
-          Price
-        </Link>
-        <Link
-          to="/log-in"
-          className={`h-full flex items-center px-2 ${
-            path === "/log-in"
-              ? "bg-white text-[#D484EA]"
-              : "bg-[#D484EA] text-white"
-          }`}
-        >
-          Log-in
-        </Link>
-        <Link
-          to="/sign-up"
-          className={`h-full flex items-center px-2 ${
-            path === "/sign-up"
-              ? "bg-white text-[#D484EA]"
-              : "bg-[#D484EA] text-white"
-          }`}
-        >
-          Sign-up
-        </Link>
+        <p className="self-center whitespace-nowrap text-2xl sm:text-3xl font-bold text-[#A95AC0]">
+          Mauve
+          <span className="block text-xs sm:text-sm">Driver Recruit</span>
+        </p>
+      </Navbar.Brand>
+      <div className="flex gap-3 items-center md:order-2">
+        {currentUser ? (
+          <Dropdown
+            arrowIcon={false}
+            inline
+            label={
+              <Avatar alt="User settings" img={drivers[0].avatar} rounded />
+            }
+          >
+            <Dropdown.Header>
+              <span className="block text-sm">{drivers[0].name}</span>
+              <span className="block truncate text-sm font-medium">
+                {drivers[0].email}
+              </span>
+            </Dropdown.Header>
+            <Dropdown.Item>Dashboard</Dropdown.Item>
+            <Dropdown.Item>Earnings</Dropdown.Item>
+            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item>Sign out</Dropdown.Item>
+          </Dropdown>
+        ) : (
+          <>
+            <Link
+              to="/log-in"
+              className={`h-full flex items-center text-[#A95AC0] border hover:text-white border-[#A95AC0] px-4 py-2 rounded-lg hover:bg-[#af89bb] hover:opacity-55`}
+            >
+              <FaSignInAlt className="inline-block sm:hidden text-2xl" />
+              <span className="hidden sm:inline-block">Sign In</span>
+            </Link>
+            <Link
+              to="/sign-up"
+              className={`h-full flex items-center text-[white] bg-[#A95AC0]
+              px-4 py-2 rounded-lg hover:opacity-55`}
+            >
+              <FaSignOutAlt className="inline-block sm:hidden text-2xl" />
+              <span className="hidden sm:inline-block">Sign Out</span>
+            </Link>
+          </>
+        )}
+
+        <Navbar.Toggle />
       </div>
-
-      {/* search */}
-      {/* <input
-        type="text"
-        className="hidden md:inline-block rounded-full w-10 md:w-56 border-[#D484EA]"
-      /> */}
-
-      {/* dropdown */}
-      <div
-        className="inline-block lg:hidden cursor-pointer"
-        onClick={() => setMenuVisible(true)}
-      >
-        <BiMenuAltRight className="text-4xl text-[#D484EA]" />
-      </div>
-
-      {/* dropdown menu */}
-
-      <div
-        className={`flex flex-col bg-[#d660f7] absolute top-0 right-0 overflow-hidden transition-all ${
-          menuVisible === true ? "w-full min-h-screen p-2" : "w-0 p-0"
-        }`}
-      >
-        <div
-          className="flex items-center gap-1 text-white cursor-pointer p-2 hover:text-red-300"
-          onClick={() => setMenuVisible(false)}
-        >
-          <RiArrowGoBackLine />
-          Back
-        </div>
-        <div className="flex-1 p-2 flex flex-col gap-2 text-white text-center">
+      <Navbar.Collapse className="">
+        <Navbar.Link active={path === "/"} as="div" className="">
           <Link
             to="/"
-            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
-            onClick={() => setMenuVisible(false)}
+            className={`sm:text-[#A95AC0] text-[16px] w-full h-full ${
+              path === "/" ? "text-white" : "text-[#A95AC0]"
+            }`}
           >
             Home
           </Link>
+          {path === "/" ? (
+            <hr className="border-[1px] border-[#A95AC0] hidden sm:block" />
+          ) : (
+            <></>
+          )}
+        </Navbar.Link>
+        <Navbar.Link active={path === "/service"} as="div">
           <Link
             to="/service"
-            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
-            onClick={() => setMenuVisible(false)}
+            className={`sm:text-[#A95AC0] text-[16px] w-full h-full ${
+              path === "/service" ? "text-white" : "text-[#A95AC0]"
+            }`}
           >
             Service
           </Link>
+          {path === "/service" ? (
+            <hr className="border-[1px] border-[#A95AC0] hidden sm:block" />
+          ) : (
+            <></>
+          )}
+        </Navbar.Link>
+        <Navbar.Link active={path === "/about"} as="div">
           <Link
             to="/about"
-            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
-            onClick={() => setMenuVisible(false)}
+            className={`sm:text-[#A95AC0] text-[16px] w-full h-full ${
+              path === "/about" ? "text-white" : "text-[#A95AC0]"
+            }`}
           >
             About
           </Link>
+          {path === "/about" ? (
+            <hr className="border-[1px] border-[#A95AC0] hidden sm:block" />
+          ) : (
+            <></>
+          )}
+        </Navbar.Link>
+        <Navbar.Link active={path === "/price"} as="div">
           <Link
             to="/price"
-            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
-            onClick={() => setMenuVisible(false)}
+            className={`sm:text-[#A95AC0] text-[16px] w-full h-full ${
+              path === "/price" ? "text-white" : "text-[#A95AC0]"
+            }`}
           >
             Price
           </Link>
+          {path === "/price" ? (
+            <hr className="border-[1px] border-[#A95AC0] hidden sm:block" />
+          ) : (
+            <></>
+          )}
+        </Navbar.Link>
+        <Navbar.Link active={path === "/contact"} as="div">
           <Link
-            to="/log-in"
-            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
-            onClick={() => setMenuVisible(false)}
+            to="/contact"
+            className={`sm:text-[#A95AC0] text-[16px] w-full h-full ${
+              path === "/contact" ? "text-white" : "text-[#A95AC0]"
+            }`}
           >
-            Log in
+            Contact
           </Link>
-          <Link
-            to="/sign-up"
-            className="p-2 w-full bg-[#eca8ff] opacity-100 rounded-md hover:bg-[#dcb5e7] hover:text-[#D484EA]"
-            onClick={() => setMenuVisible(false)}
-          >
-            Sign up
-          </Link>
-        </div>
-      </div>
-    </div>
+          {path === "/contact" ? (
+            <hr className="border-[1px] border-[#A95AC0] hidden sm:block" />
+          ) : (
+            <></>
+          )}
+        </Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }

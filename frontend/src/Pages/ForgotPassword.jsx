@@ -29,7 +29,7 @@ export default function ForgotPassword() {
             required
             className="w-full"
           />
-          <Button className="mt-4 md:mt-10 bg-[#CA78FA]">Continue</Button>
+          <Button className="mt-4 md:mt-10 bg-[#A95AC0]">Continue</Button>
         </div>
       </div>
     </div>

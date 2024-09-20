@@ -12,8 +12,6 @@ export default function PricePage() {
     "Previous Employer Reference",
     "Address verification",
     "Full medical check-up of drivers",
-    "Dedicated account manager for personalised support",
-    "24/7 customer service hotline for urgent inquiries",
   ];
 
   const extra_benefit = [
@@ -22,17 +20,27 @@ export default function PricePage() {
   ];
 
   const benefit_list_2 = [
-    "Security for the Driver",
-    "Stressless process for application",
-    "Fully automated process",
+    "Flexible Driver Availability",
+    "Convenient Booking Process",
+    "Reliable and Professional Drivers",
+    "Customizable Driver Requirements",
+    "Transparent Pricing",
+    "Stress-Free Driver Management",
+    "Customer Support",
+    "Seamless Payment Processing",
+    "Driver Ratings and Reviews",
   ];
 
   const benefit_list_3 = [
     "Handling salaries",
     "HMO",
-    "Statutory payments (such as Pension and Group Life)Personal Reference Check",
-    "Benefits",
-    "Training",
+    "Statutory Payments (Pension and Group Life)",
+    "Performance Bonuses",
+    "Uniforms",
+    "Background Checks",
+    "Customer support",
+    "Referral Rewards",
+    "Driver Training",
   ];
 
   return (
@@ -43,7 +51,7 @@ export default function PricePage() {
             height="min-h-[700px]"
             title="One-Off Driver"
             currency={<TbCurrencyNaira className="text-5xl font-extrabold" />}
-            amount_action="115,000"
+            amount_action="100,000"
             comment="There's a one-time fee Pay 40% upfront as a non-refundable retainer"
             items={benefit_list_1}
             extra_items={extra_benefit}
@@ -54,7 +62,7 @@ export default function PricePage() {
             height="min-h-[420px]"
             title="On-Demand Driver"
             currency={<TbCurrencyNaira className="text-5xl font-extrabold" />}
-            amount_action="30,000"
+            amount_action="40,000"
             comment="Inclusive of both driver payment and service charge."
             items={benefit_list_2}
             btn_text="Hire Now"
